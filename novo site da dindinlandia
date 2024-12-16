@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dindinlândia - Nossos Sabores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            background-color: #ff4500;
+            padding: 20px;
+            margin: 0;
+        }
+        .section {
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+        .card button {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            border-radius: 0 0 8px 8px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .card button:hover {
+            background-color: #e63900;
+        }
+        .hidden-recipe {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff4500;
+            color: white;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #e63900;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .footer a:hover {
+            background-color: #c72800;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .techniques {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .techniques h3 {
+            text-align: center;
+            color: #ff4500;
+        }
+        .techniques ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .techniques li {
+            padding: 10px;
+            background-color: #fff;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script>
+        function toggleRecipe(id) {
+            const recipe = document.getElementById(id);
+            recipe.style.display = recipe.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1> seja bem vindo a Dindinlândia</h1>
+    <style>
+        h2  {
+            text-align: center; 
+        } 
+    </style> <h2><strong>Descubra sabores incriveis para começar a empreender.</strong></h2>
+    <style>
+        h4  {
+            text-align: center;   
+
+    </style> <h4> Esse site foi desenvolvido para que você aprenda a fazer e vender din din, o site está bem <br> 
+        recheado, então aproveite  e comece a vender. Com conteúdo exclusivo e dicas valiosas, você <br>
+         estará no caminho certo para alcançar o sucesso e aumentar seus ganhos! Mas não adianta de <br> nada se você não praticar, então coloque em ação o que aprendeu e veja os resultados <br>
+         acontecerem!</h4>
+       
+    <!-- Seção de Sabores -->
+    <div class="section">
+        <h2>Nossos Sabores</h2>
+        <div class="container">
+            <div class="card">
+                <img src="https://i.ibb.co/4jLqCmP/Whats-App-Image-2024-12-03-at-20-49-54.jpg" alt="Dindin de Ninho">
+                <h3>Dindin de Ninho</h3>
+                <button onclick="toggleRecipe('recipe-ninho')">Ver Receita</button>
+                <div id="recipe-ninho" class="hidden-recipe">
+                    <h4>Receita:</h4>
+                    <ul>
+                        <li>1 xícara de leite condensado</li>
+                        <li>1 xícara de leite em pó</li>
+                        <li>1/2 xícara de água</li>
+                    </ul>
+                    <h4>Modo de Preparo:</h4>
+                    <p>Em uma tigela, misture todos os ingredientes até obter uma mistura homogênea. Coloque nos sacos de dindin e leve ao congelador por 6 horas.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.ibb.co/z5NrjhL/Whats-App-Image-2024-12-03-at-20-49-54-1.jpg" alt="Dindin de Oreo">
+                <h3>Dindin de Oreo</h3>
+                <button onclick="toggleRecipe('recipe-oreo')">Ver Receita</button>
+                <div id="recipe-oreo" class="hidden-recipe">
+                    <h4>Receita:</h4>
+                    <ul>
+                        <li>1 pacote de Oreo</li>
+                        <li>1 xícara de leite condensado</li>
+                    </ul>
+                    <h4>Modo de Preparo:</h4>
+                    <p>Quebre os biscoitos Oreo e misture com o leite condensado até formar uma pasta cremosa. Coloque nos sacos de dindin e leve ao congelador por 6 horas.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.ibb.co/4S0FMw4/Whats-App-Image-2024-12-03-at-20-49-54.jpg" alt="Dindin de Ninho com Morango">
+                <h3>Dindin de Ninho com Morango</h3>
+                <button onclick="toggleRecipe('recipe-ninho-morango')">Ver Receita</button>
+                <div id="recipe-ninho-morango" class="hidden-recipe">
+                    <h4>Receita:</h4>
+                    <ul>
+                        <li>1 xícara de leite condensado</li>
+                        <li>1 xícara de leite em pó</li>
+                        <li>1/2 xícara de água</li>
+                        <li>Morango picado a gosto</li>
+                    </ul>
+                    <h4>Modo de Preparo:</h4>
+                    <p>Em uma tigela, misture os ingredientes e acrescente o morango picado. Coloque nos sacos de dindin e leve ao congelador por 6 horas.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.ibb.co/zVCvs2n/Whats-App-Image-2024-12-03-at-20-49-54-3.jpg" alt="Dindin de Morango com Chocolate">
+                <h3>Dindin de Morango com Chocolate</h3>
+                <button onclick="toggleRecipe('recipe-morango-chocolate')">Ver Receita</button>
+                <div id="recipe-morango-chocolate" class="hidden-recipe">
+                    <h4>Receita:</h4>
+                    <ul>
+                        <li>1 xícara de morango picado</li>
+                        <li>1 xícara de leite condensado</li>
+                        <li>1/2 xícara de leite em pó</li>
+                        <li>1/2 xícara de chocolate derretido</li>
+                    </ul>
+                    <h4>Modo de Preparo:</h4>
+                    <p>Misture o leite condensado e o leite em pó. Acrescente o morango picado e o chocolate derretido. Coloque nos sacos de dindin e leve ao congelador por 6 horas.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.ibb.co/y5xdyYF/Whats-App-Image-2024-12-03-at-20-49-54-2.jpg" alt="Dindin de Maracujá com Chocolate">
+                <h3>Dindin de Maracujá com Chocolate</h3>
+                <button onclick="toggleRecipe('recipe-maracuja-chocolate')">Ver Receita</button>
+                <div id="recipe-maracuja-chocolate" class="hidden-recipe">
+                    <h4>Receita:</h4>
+                    <ul>
+                        <li>1 xícara de polpa de maracujá</li>
+                        <li>1 xícara de leite condensado</li>
+                        <li>1/2 xícara de leite em pó</li>
+                        <li>1/2 xícara de chocolate branco derretido</li>
+                    </ul>
+                    <h4>Modo de Preparo:</h4>
+                    <p>Em uma tigela, misture todos os ingredientes e adicione o chocolate branco derretido. Coloque nos sacos de dindin e leve ao congelador por 6 horas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Seção de Sabores de Trufa -->
+<div class="section">
+    <h2>Nossos Sabores de Trufa</h2>
+    <div class="container">
+        <div class="card">
+            <img src="https://i.ibb.co/n3rMVxk/Whats-App-Image-2024-12-07-at-23-19-04.jpg" alt="Trufa de Brigadeiro">
+            <h3>Trufa de Brigadeiro</h3>
+            <button onclick="toggleRecipe('recipe-brigadeiro')">Ver Receita</button>
+            <div id="recipe-brigadeiro" class="hidden-recipe">
+                <h4>Receita:</h4>
+                <ul>
+                    <li>200g de chocolate meio amargo</li>
+                    <li>1 lata de leite condensado</li>
+                    <li>2 colheres de sopa de chocolate em pó</li>
+                </ul>
+                <h4>Modo de Preparo:</h4>
+                <p>Derreta o chocolate em banho-maria, misture os ingredientes e modele as trufas. Leve à geladeira por 2 horas.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/Q8phqNP/Whats-App-Image-2024-12-07-at-23-18-47.jpg" alt="Trufa de Maracujá">
+            <h3>Trufa de Maracujá</h3>
+            <button onclick="toggleRecipe('recipe-maracuja')">Ver Receita</button>
+            <div id="recipe-maracuja" class="hidden-recipe">
+                <h4>Receita:</h4>
+                <ul>
+                    <li>200g de chocolate branco</li>
+                    <li>50ml de suco concentrado de maracujá</li>
+                    <li>1 colher de sopa de creme de leite</li>
+                </ul>
+                <h4>Modo de Preparo:</h4>
+                <p>Derreta o chocolate, misture o suco e o creme de leite. Modele e leve à geladeira até firmar.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/gtp416H/Whats-App-Image-2024-12-07-at-23-18-26.jpg" alt="Trufa de Coco">
+            <h3>Trufa de Coco</h3>
+            <button onclick="toggleRecipe('recipe-coco')">Ver Receita</button>
+            <div id="recipe-coco" class="hidden-recipe">
+                <h4>Receita:</h4>
+                <ul>
+                    <li>200g de chocolate branco</li>
+                    <li>50g de coco ralado</li>
+                    <li>1 colher de sopa de leite condensado</li>
+                </ul>
+                <h4>Modo de Preparo:</h4>
+                <p>Derreta o chocolate, misture os ingredientes e modele as trufas. Leve à geladeira até endurecer.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/3r86S3N/Whats-App-Image-2024-12-07-at-23-18-09.jpg" alt="Trufa de Avelã">
+            <h3>Trufa de Avelã</h3>
+            <button onclick="toggleRecipe('recipe-avela')">Ver Receita</button>
+            <div id="recipe-avela" class="hidden-recipe">
+                <h4>Receita:</h4>
+                <ul>
+                    <li>200g de chocolate ao leite</li>
+                    <li>2 colheres de sopa de creme de avelã</li>
+                    <li>1 colher de sopa de creme de leite</li>
+                </ul>
+                <h4>Modo de Preparo:</h4>
+                <p>Derreta o chocolate, misture com o creme de avelã e o creme de leite. Modele as trufas e leve à geladeira para firmar.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/g4NPJsk/Whats-App-Image-2024-12-07-at-23-17-51.jpg" alt="Trufa de Limão">
+            <h3>Trufa de Limão</h3>
+            <button onclick="toggleRecipe('recipe-limao')">Ver Receita</button>
+            <div id="recipe-limao" class="hidden-recipe">
+                <h4>Receita:</h4>
+                <ul>
+                    <li>200g de chocolate branco</li>
+                    <li>50ml de suco de limão</li>
+                    <li>Raspas de limão para decorar</li>
+                </ul>
+                <h4>Modo de Preparo:</h4>
+                <p>Derreta o chocolate, misture com o suco de limão e modele as trufas. Decore com raspas de limão e leve à geladeira.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/pWkjGNJ/Whats-App-Image-2024-12-07-at-23-17-33.jpg" alt="Trufa de Morango">
+            <h3>Trufa de Morango</h3>
+            <button onclick="toggleRecipe('recipe-morango')">Ver Receita</button>
+            <div id="recipe-morango" class="hidden-recipe">
+                <h4>Receita:</h4>
+                <ul>
+                    <li>200g de chocolate meio amargo</li>
+                    <li>50g de geleia de morango</li>
+                    <li>1 colher de sopa de creme de leite</li>
+                </ul>
+                <h4>Modo de Preparo:</h4>
+                <p>Derreta o chocolate, misture com a geleia de morango e o creme de leite. Modele as trufas e leve à geladeira.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Seção de Sabores de Mousses -->
+<div class="section">
+    <h2>Nossos Sabores de Mousses</h2>
+    <div class="container">
+        <div class="card">
+            <img src="https://i.ibb.co/6sFd0hf/Whats-App-Image-2024-12-07-at-23-17-15.jpg" alt="Mousse de Chocolate">
+            <h3>Mousse de Chocolate</h3>
+            <button onclick="toggleRecipe('recipe-chocolate')">Ver Receita</button>
+            <div id="recipe-chocolate" class="hidden-recipe">
+                <h4>Receita:</h4>
+                <ul>
+                    <li>200g de chocolate meio amargo</li>
+                    <li>3 ovos (claras e gemas separadas)</li>
+                    <li>100g de açúcar</li>
+                    <li>200ml de creme de leite</li>
+                </ul>
+                <h4>Modo de Preparo:</h4>
+                <p>Derreta o chocolate, bata as claras em neve e misture tudo delicadamente. Leve à geladeira por 2 horas.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/9ncJkCS/Whats-App-Image-2024-12-07-at-23-17-03.jpg" alt="Mousse de Limão">
+            <h3>Mousse de Limão</h3>
+            <button onclick="toggleRecipe('recipe-limao-mousse')">Ver Receita</button>
+            <div id="recipe-limao-mousse" class="hidden-recipe">
+                <h4>Receita:</h4>
+                <ul>
+                    <li>1 lata de leite condensado</li>
+                    <li>1 lata de creme de leite</li>
+                    <li>1/2 xícara de suco de limão</li>
+                    <li>Raspas de limão para decorar</li>
+                </ul>
+                <h4>Modo de Preparo:</h4>
+                <p>Bata os ingredientes no liquidificador, coloque em taças e leve à geladeira por 2 horas. Decore com raspas de limão.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/CWXkFN2/Whats-App-Image-2024-12-07-at-23-16-49.jpg" alt="Mousse de Maracujá">
+            <h3>Mousse de Maracujá</h3>
+            <button onclick="toggleRecipe('recipe-maracuja-mousse')">Ver Receita</button>
+            <div id="recipe-maracuja-mousse" class="hidden-recipe">
+                <h4>Receita:</h4>
+                <ul>
+                    <li>1 lata de leite condensado</li>
+                    <li>1 lata de creme de leite</li>
+                    <li>1/2 xícara de suco concentrado de maracujá</li>
+                    <li>Sementes de maracujá para decorar</li>
+                </ul>
+                <h4>Modo de Preparo:</h4>
+                <p>Bata os ingredientes no liquidificador, coloque em taças e leve à geladeira. Decore com sementes de maracujá.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/TkVY4fj/Whats-App-Image-2024-12-07-at-23-16-35.jpg" alt="Mousse de Morango">
+            <h3>Mousse de Morango</h3>
+            <button onclick="toggleRecipe('recipe-morango-mousse')">Ver Receita</button>
+            <div id="recipe-morango-mousse" class="hidden-recipe">
+                <h4>Receita:</h4>
+                <ul>
+                    <li>1 lata de leite condensado</li>
+                    <li>1 lata de creme de leite</li>
+                    <li>1 xícara de morangos frescos</li>
+                </ul>
+                <h4>Modo de Preparo:</h4>
+                <p>Bata os morangos com os outros ingredientes no liquidificador. Coloque em taças e leve à geladeira até firmar.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <!-- Inspirações de Sabores -->
+<div class="section">
+    <h2>Sabores com mais demanda de vendas</h2>
+    
+    <ol>
+        <h3><strong>aviso previo as imagens acimas são somente ilustrativas!</strong></h3>
+        <li>Abacaxi com Hortelã</li>
+        <li>Coco com Leite Condensado</li>
+        <li>Chocolate Branco com Amendoim</li>
+        <li>Laranja com Menta</li>
+        <li>Morango com Chocolate</li>
+        <li>Maracujá com Chocolate</li>
+        <li>Coco</li>
+        <li>Oreo</li>
+        <li>Blu Ice</li>
+        <li>Leite Condensado</li>
+        <li>Castanha</li>
+        <li>Ninho</li>
+        <li>Ninho com Chocolate</li>
+        <li>Ninho com Cauda de Morango</li>
+    </ol>
+</div>   
+
+<!-- Inspirações de Sabores de Trufas -->
+<div class="section">
+    <h2>Sabores de trufas com mais demanda de vendas</h2>
+    <ol>
+        <li>Trufa Casadinho (dois sabores que você desejar)</li>
+        <li>Trufa de Coco</li>
+        <li>Trufa de Morango</li>
+        <li>Trufa de Chocolate</li>
+        <li>Trufa de Ninho</li>
+        <li>Trufa de Leite Condensado</li>
+        <li>Trufa de Maracujá</li>
+        <li>Trufa de Coco</li>
+        <li>Trufa de Abacaxi</li>
+        <li>Trufa de Limão</li>
+        <li>Trufa de Manga</li>
+        <li>Trufa de Uva</li>
+        <li>Trufa de Framboesa</li>
+        <li>Trufa de Cajá</li>
+        <li>Trufa de Cacau</li>
+    </ol>
+</div>
+
+<!--  Inspiraçõesde Mousses  -->
+<div class="section"> 
+<h2>sabores que as <strong>pressoas</strong> mais gosta!</h2>
+<ol>
+<li>mousse de recipe-maracuja</li>
+<li>mousse de morango</li>
+<li>mousse de paçoca </li>
+<li>Abacaxi</li>
+<li>limão</li>
+
+</ol>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+    <!-- Técnicas de Venda -->
+    <div class="section techniques">
+        <h3>Maximize Suas Vendas com as Melhores Estratégias!</h3>
+        <ul>
+            <li><strong>Conheça o Seu Público:</strong> Entenda os hábitos e preferências dos seus clientes. Ofereça sabores que atendam às suas necessidades e expectativas. Um bom vendedor sempre sabe o que seu público quer.</li>
+            <li><strong>Promoções Atrativas:</strong> Ofereça descontos ou promoções especiais para atrair mais clientes. Por exemplo, um desconto progressivo onde o cliente ganha mais unidades por um valor menor.</li>
+            <li><strong>Exposição do Produto:</strong> A forma como você apresenta seus produtos pode influenciar na compra. Utilize embalagens que se destaquem e sejam atraentes. Expor os produtos de forma visível e acessível pode fazer a diferença.</li>
+            <li><strong>Venda Cruzada:</strong> Ofereça produtos complementares. Por exemplo, sugira uma bebida gelada junto com o dindin para tornar a experiência do cliente ainda melhor.</li>
+            <li><strong>Use a Urgência:</strong> Utilize frases como “Promoção por tempo limitado!” ou “Últimas unidades disponíveis!” Isso cria um senso de urgência e pode motivar o cliente a comprar na hora.</li>
+            <li><strong>Atendimento Personalizado:</strong> Trate cada cliente com atenção, ouça suas preferências e sugira produtos que se encaixem com seu gosto. Um atendimento diferenciado fideliza os clientes.</li>
+            <li><strong>Investir em Redes Sociais:</strong> Divulgue seus produtos nas redes sociais. Crie promoções exclusivas para seguidores e engaje o público com conteúdo interativo e promoções periódicas.</li>
+            <li><strong>Aproveite as Festas e Datas Comemorativas:</strong> Crie combos e ofertas especiais em datas comemorativas, como aniversários, festas de fim de ano e datas regionais. Isso atrai novos clientes e aumenta as vendas.</li>
+        </ul>
+    </div>
+    <style>
+        h4 {
+            text-align: center;
+    </style> <h4> Se desejar aprender mais receitas siga-nos no Instagram postamos receitas diariamente.
+
+</h4>
+    <!-- Contato -->
+    <div class="footer">
+        <p>Entre em contato conosco e confira mais sabores!</p>
+        <a href="https://www.instagram.com/dindinlandia_felicidade?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">confira mais sabores</a>
+    </div>
+</body>
+</html> 
